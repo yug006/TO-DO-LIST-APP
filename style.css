@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #3ba162;
+  background: linear-gradient(
+    95deg,
+    rgba(59, 161, 98, 1) 0%,
+    rgba(21, 212, 186, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-height: 20rem;
+  width: 35rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.input {
+  width: 25rem;
+  display: flex;
+  margin-top: 20px;
+}
+#input-box {
+  width: 19rem;
+  margin-right: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.89);
+  color: black;
+  padding: 5px;
+}
+
+#add-btn {
+  width: 69px;
+  border: none;
+  background-color: rgb(255 255 255 / 66%);
+  backdrop-filter: blur(12px);
+}
+
+#input-box,
+#add-btn {
+  height: 30px;
+  border-radius: 5px;
+}
+
+li {
+  width: 18rem;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 5px;
+  list-style: none;
+
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.151);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+span {
+  width: 18rem;
+  padding-left: 5px;
+  font-size: small;
+}
+
+.del-btn {
+  width: 69px;
+  border: none;
+  background-color: rgb(255 255 255 / 66%);
+  backdrop-filter: blur(12px);
+  border-radius: 5px;
+  height: 30px;
+}
