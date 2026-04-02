@@ -3,6 +3,12 @@ const addBtn = document.querySelector("#add-btn");
 const ul = document.querySelector("ul");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    addTask();
+  }
+});
+
 const savetask = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
@@ -11,13 +17,30 @@ const render = () => {
   ul.innerHTML = "";
 
   tasks.forEach((task) => {
+    let className = "";
+
+    if (task.completed === true) {
+      className = "completed";
+    }
     ul.innerHTML += `
          <li>
-                <span>${task.text}</span>
+              <span onclick="strikeThrough(${task.id})" class="${className}">${task.text}</span>
                 <button  onclick="delTask(${task.id})"  class="del-btn">Delete</button>
             </li>
         `;
   });
+};
+
+const strikeThrough = (id) => {
+  tasks = tasks.map((task) => {
+    if (task.id === id) {
+      task.completed = !task.completed;
+    }
+
+    return task;
+  });
+  savetask();
+  render();
 };
 
 const delTask = (id) => {

@@ -96,3 +96,11 @@ span {
   border-radius: 5px;
   height: 30px;
 }
+
+
+.completed {
+
+text-decoration:line-through;
+color: rgba(255, 255, 255, 0.349);
+
+}
